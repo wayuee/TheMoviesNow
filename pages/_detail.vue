@@ -6,8 +6,8 @@
       >The Movie Now</nuxt-link
     >
     </ul>
-    <div class="mt-5 mr-96">
-    <img :src="`http://image.tmdb.org/t/p/w500${detail.poster_path}`" class=" border rounded-xl float-left  mr-10 ml-44" style="height:530px;"/>
+    <div class="mt-5 mr-40">
+    <img :src="`http://image.tmdb.org/t/p/w500${detail.poster_path}`" class=" border rounded-xl float-left  mr-10 ml-44" style="height:535px;"/>
     <div class="text-4xl font-bold mb-5"> {{ detail.title }}</div>
     <h1>Release Date : <span class="font-bold">{{ detail.release_date }}</span></h1>
     <h1 class="inline-block">Genre : <span v-for="(data,id) in detail.genres" :key="id" class="font-bold">{{`${data.name}, `}}</span></h1>
@@ -17,7 +17,9 @@
     <h1 class="pt-3">Production Studio:</h1>
     <span class="font-bold" v-for="(data,id) in detail.production_companies " :key="id">{{`${data.name},`}}</span>-
     <h1 class="pt-3">Stars: </h1>
-    <span class="font-bold mb-10" v-for="(item,id) in stars" :key="id">{{`${item.original_name}, `}}</span>-
+    <ul class="pb-5">
+    <span class="font-bold" v-for="(item,id) in stars" :key="id">{{`${item.original_name}, `}}</span>-
+    </ul>
     <hr>
     </div>
   </div>
