@@ -1,7 +1,10 @@
 <template>
-  <div class="py-10">
+  <div class="pb-10">
+    <ul class="bg-indigo-200 pt-3 pb-0.5">
+    <h1 class="text-center font-bold text-xl mb-8 ">The Movie Now</h1>
+    </ul>
     <div v-for="(data, id) in detailPage" :key="id"></div>
-      <div class="flex flex-wrap justify-center">
+      <div class="grid grid-cols-4 gap-10 pt-5">
         <CardMovie
           v-for="(item, id) in results"
           :key="id"
@@ -46,9 +49,8 @@ export default {
         });
     },
     toPageDetailMovie(item) {
-      console.log(item.popularity);
       this.$router.push(
-        `/${item.title}?id=${item.id}&poster_path=${this.poster_path}}`
+        `/${item.title}?id=${item.id}`
       );
     },
   },
