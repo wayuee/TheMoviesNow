@@ -103,7 +103,7 @@ export default {
   @media (min-width: 331px) {
     #img{
       height: 148px;
-      margin-bottom: 300px;
+      margin-bottom: 500px;
     }
   }
   @media (min-width: 411px) {
