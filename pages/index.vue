@@ -49,8 +49,7 @@ export default {
         });
     },
     toPageDetailMovie(item) {
-      this.$router.push(
-        `/${item.title}?id=${item.id}`
+      this.$router.push(`/detail?id=${item.id}`
       );
     },
   },

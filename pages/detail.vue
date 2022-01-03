@@ -52,7 +52,7 @@ export default {
       this.movieId = this.$route.query.id;
     },
     getDataFromDetail() {
-    var api1 =`https://api.themoviedb.org/3/movie/${this.movieId}?api_key=6de3c0f0176c22fabe34c6be66fa8cae`
+      var api1 =`https://api.themoviedb.org/3/movie/${this.movieId}?api_key=6de3c0f0176c22fabe34c6be66fa8cae`
       axios
         .get(api1)
         .then((res) => {
