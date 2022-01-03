@@ -9,7 +9,7 @@
       <div class="mt-5 mr-4 md:mr-10 lg:mr-20 xl:mr-40">
         <img
           :src="`http://image.tmdb.org/t/p/w500${detail.poster_path}`"
-          class="border rounded-xl float-left h-80 mb-5 mr-2 sm:ml-2 sm:mb-80 md:mb-80 md:ml-2 md:mb-40 lg:ml-20 xl:ml-40 "
+          class="border rounded-xl float-left h-96 mb-5 mr-2 sm:ml-2 sm:mb-80 md:mb-80 md:ml-2 md:mb-40 lg:ml-20 xl:ml-40 "
           id="img"
         />
         <div class="text-base md:text-xl lg:text-2xl xl:text-4xl font-bold mb-2 md:mb-5 lg:mb-6 xl:mb-8">{{ detail.title }}</div>
