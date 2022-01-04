@@ -9,15 +9,15 @@
       <div class="mt-5 mr-4 md:mr-10 lg:mr-20 xl:mr-40">
         <img
           :src="`http://image.tmdb.org/t/p/w500${detail.poster_path}`"
-          class="border rounded-xl float-left h-96 mb-5 mr-2 sm:ml-2 sm:mb-80 md:mb-80 md:ml-2 md:mb-40 lg:ml-20 xl:ml-40 "
+          class="border rounded-xl h-96 mb-5 mr-2 sm:ml-2 sm:mb-28 md:mb-28 sm:float-left lg:float-left xl:float-left md:float-left md:ml-2 md:mb-40 lg:ml-20 xl:ml-40 "
           id="img"
         />
-        <div class="text-base md:text-xl lg:text-2xl xl:text-4xl font-bold mb-2 md:mb-5 lg:mb-6 xl:mb-8">{{ detail.title }}</div>
-        <h1 class="text-xs md:text-sm lg:text-base xl:text-base">
+        <div class="text-lg md:text-xl lg:text-2xl xl:text-4xl font-bold mb-2 md:mb-5 lg:mb-6 xl:mb-8">{{ detail.title }}</div>
+        <h1 class="text-sm md:text-sm lg:text-base xl:text-base">
           Release Date :
           <span class="font-bold">{{ detail.release_date }}</span>
         </h1>
-        <h1 class="text-xs md:text-sm lg:text-base xl:text-base inline-block">
+        <h1 class="text-sm md:text-sm lg:text-base xl:text-base inline-block">
           Genre :
           <span
             v-for="(data, id) in detail.genres"
@@ -26,13 +26,13 @@
             >{{ `${data.name}, ` }}</span
           >
         </h1>
-        <h1 class="text-xs md:text-sm lg:text-base xl:text-base">
+        <h1 class="text-sm md:text-sm lg:text-base xl:text-base">
           Run Time : <span class="font-bold">{{ detail.runtime }}m</span>
         </h1>
-        <h1 class="text-xs md:text-sm lg:text-base xl:text-base mt-2 md:mt-5 lg:mt-6 xl:mt-8 text-justify pb-2 xl:pb-3 md:pb-3 lg:pb-3">{{ detail.overview }}</h1>
+        <h1 class="text-sm md:text-sm lg:text-base xl:text-base mt-2 md:mt-5 lg:mt-6 xl:mt-8 text-justify pb-2 xl:pb-3 md:pb-3 lg:pb-3">{{ detail.overview }}</h1>
         <hr />
-        <h1 class="text-xs md:text-sm lg:text-base xl:text-base pt-1 lg:pt-3 xl:pt-3 md:pt-3">Production Studio:</h1>
-        <ul class="text-xs md:text-sm lg:text-base xl:text-base pb-2">
+        <h1 class="text-sm md:text-sm lg:text-base xl:text-base pt-1 lg:pt-3 xl:pt-3 md:pt-3">Production Studio:</h1>
+        <ul class="text-sm md:text-sm lg:text-base xl:text-base pb-2">
         <span
           class="font-bold"
           v-for="(data, id) in detail.production_companies"
@@ -40,8 +40,8 @@
           >{{ `${data.name}, ` }}</span
         >-
         </ul>
-        <h1 class="text-xs md:text-sm lg:text-base xl:text-base">Stars:</h1>
-        <ul class="text-xs md:text-sm lg:text-base xl:text-base mb-2 md:mb-3 lg:mb-4 xl:mb-5">
+        <h1 class="text-sm md:text-sm lg:text-base xl:text-base">Stars:</h1>
+        <ul class="text-sm md:text-sm lg:text-base xl:text-base mb-2 md:mb-3 lg:mb-4 xl:mb-5">
           <span class="font-bold" v-for="(item, id) in stars" :key="id">{{
             `${item.original_name}, `
           }}</span
@@ -102,17 +102,6 @@ export default {
 </script>
 
 <style>
-  @media (min-width: 331px) {
-    #img{
-      height: 148px;
-      margin-bottom: 500px;
-    }
-  }
-  @media (min-width: 411px) {
-    #img{
-      height: 215px;
-    }
-  }
   @media (min-width: 768px) {
     #img{
       height: 400px;
